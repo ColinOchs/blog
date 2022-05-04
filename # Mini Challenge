@@ -1,0 +1,29 @@
+# Mini Challenge
+Create a blog application where users can create, read, update, delete and scan blog posts.
+Here are the initial steps to follow:
+1. Create a new django project that uses "blog" as its containing project folder.
+2. Create a new pages app.
+3. Create a new posts app.
+4. Create a home page and an about page.
+5. Create a model with the following attributes:
+5.1. title
+5.2. body
+5.3. author
+5.4. created_on
+
+6. Create a ListView for blog posts
+7. Create a detail view for blog posts.
+8. Add bootstrap to your project.
+9. Add a navbar that makes all views accessible.
+10. Create a super user and test out your application.
+
+```
+class Post(models.Model):
+title = models.CharField(max_length=256)
+author = models.ForeignKey(
+    'auth.User',
+    on_delete=models.CASCADE)
+    body = models.TextField()
+    created_on = models.DateTimeField(auto_now_add=True)
+
+```
