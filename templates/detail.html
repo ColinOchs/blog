@@ -1,12 +1,21 @@
-{% extends 'base.html' %}  
-
-{% block title %}{{ post.title }}{% endblock title %}  
-
-{% block content %} 
-<div class="post-view" style="margin: 20px; padding: 10px; border: solid 2px;background: rgb(211, 211, 211, .5);">
-    <h1 style="text-decoration: underline;  text-align: center;">{{ post.title }}</h1>
-    <h4 style="text-decoration: underline;  text-align: center;color:purple;">{{ post.author }}</h4>
-    <p style="margin:10px; padding:10px;">{{ post.body }}</p>
-    <h5 style=" text-align: center;">{{ post.created_on }}</h5>
-</div>
-{% endblock content %} 
+{% extends 'base.html' %} {% block title %}{{ post.title }}{% endblock title %}
+{% block content %}
+    <div
+    class="post-view"
+    style="
+        margin: 20px;
+        padding: 10px;
+        border: solid 2px;
+        background: rgb(211, 211, 211, 0.5);
+    "
+    >
+    <h1 style="text-decoration: underline; text-align: center">
+        {{ post.title }}
+    </h1>
+    <h5 style="text-decoration: underline; text-align: center; color: purple">
+        {{ post.author }}  
+    </h5>
+    <p style="margin: 10px; padding: 10px; font-size:20px;">{{ post.body }}</p>
+    <h5 style="text-align: center; color:gray;">{{ post.created_on }}</h5>
+    </div>
+{% endblock content %}
