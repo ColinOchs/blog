@@ -35,3 +35,4 @@ class PostDeleteView(DeleteView):
     template_name = 'delete.html'
     model = Post
     success_url = reverse_lazy('post_list')
+##
