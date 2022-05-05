@@ -9,13 +9,17 @@
         background: rgb(211, 211, 211, 0.5);
     "
     >
-    <h1 style="text-decoration: underline; text-align: center">
+    <h1 style="text-align: center">
         {{ post.title }}
     </h1>
-    <h5 style="text-decoration: underline; text-align: center; color: purple">
+    <h5 style="text-decoration: underline; text-align: center; color: blue">
         {{ post.author }}  
     </h5>
     <p style="margin: 10px; padding: 10px; font-size:20px;">{{ post.body }}</p>
     <h5 style="text-align: center; color:gray;">{{ post.created_on }}</h5>
+    <a style="font-size: 20px; color:green;text-decoration: none;" href = "{% url 'post_edit' post.id %}">edit post</a>
+    <br>
+    <a style="font-size: 20px; color:red;text-decoration: none;" href ="{% url 'post_delete' post.id %}">delete post</a>
     </div>
+
 {% endblock content %}
