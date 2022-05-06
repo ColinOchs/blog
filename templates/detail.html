@@ -1,5 +1,5 @@
-{% extends 'base.html' %} {% block title %}{{ post.title }}{% endblock title %}
-{% block content %}
+    {% extends 'base.html' %} {% block title %}{{ post.title }}{% endblock title %}
+    {% block content %}
     <div
     class="post-view"
     style="
@@ -9,17 +9,28 @@
         background: rgb(211, 211, 211, 0.5);
     "
     >
-    <h1 style="text-align: center">
-        {{ post.title }}
-    </h1>
-    <h5 style="text-decoration: underline; text-align: center; color: blue">
-        {{ post.author }}  
+    <h1 style="text-align: center; font-family:News gothic ;">{{ post.title }}</h1>
+    <h5
+        style="
+        text-decoration: underline;
+        text-align: center;
+        color: rgb(0, 0, 0, 0.5);
+        "
+    >
+        {{ post.author }}
     </h5>
-    <p style="margin: 10px; padding: 10px; font-size:20px;">{{ post.body }}</p>
-    <h5 style="text-align: center; color:gray;">{{ post.created_on }}</h5>
-    <a style="font-size: 20px; color:green;text-decoration: none;" href = "{% url 'post_edit' post.id %}">edit post</a>
-    <br>
-    <a style="font-size: 20px; color:red;text-decoration: none;" href ="{% url 'post_delete' post.id %}">delete post</a>
+    <p style="margin: 10px; padding: 10px; font-size: 20px">{{ post.body }}</p>
+    <h5 style="text-align: center; color: gray">{{ post.created_on }}</h5>
+    {% if user.is_authenticated %}
+    <p style="text-align: center">
+        <a class="btn btn-primary btn-sm" href="{% url 'post_edit' post.id %}"
+        >Edit</a
+        >
+        <a class="btn btn-danger btn-sm" href="{% url 'post_delete' post.id %}"
+        >Delete</a
+        >
+    </p>
+    {% endif %}
     </div>
 
-{% endblock content %}
+    {% endblock content %}

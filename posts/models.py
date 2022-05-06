@@ -4,9 +4,13 @@ from django.urls import reverse
 
 class Post(models.Model):
     title = models.CharField(max_length=256)
-    author = models.ForeignKey('auth.User', on_delete=models.CASCADE, null=True, default=None)
+    author = models.ForeignKey(
+        'auth.User',
+        on_delete=models.CASCADE, null=True, default=None)
     body = models.TextField()
-    created_on = models.DateTimeField(auto_now_add=True)
+    created_on = models.DateTimeField(
+        auto_now_add=True
+        )
 
     def __str__(self):
         return self.title

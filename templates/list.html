@@ -4,13 +4,13 @@
 
 {% block content %}
 
-        <h1>Posts</h1>
+        <h1 style="color: antiquewhite;">Posts</h1>
         {% for post in post_list %}
-        <div class="card post-list">
+        <div class="card post-list" style="background-color: rgb(235, 235, 235, .9);">
             <div class="card-body">
-            <h5 class="card-title">Post #{{ post.id }}</h5>
+            <h5 class="card-title" style="color: black;">Post #{{ post.id }}</h5>
             <h6 class="card-subtitle mb-2 text-muted">{{ post.title }}</h6>
-            <p class="card-text">{{ post.body| truncatechars:500}}</p>   
+            <p class="card-text" style="color: black;">{{ post.body| truncatechars:500}}</p>   
             <a href="{% url 'post_detail' post.id %}" class="card-link">Continue reading..</a>
             </div>
         </div>
