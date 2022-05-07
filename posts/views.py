@@ -8,11 +8,6 @@ from .models import Post
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.urls import reverse_lazy
 
-class HomePageView(TemplateView):
-    template_name = 'home.html'
-
-class AboutPageView(TemplateView):
-    template_name = 'about.html'    
 
 class PostListView(ListView):
     template_name = 'list.html'
