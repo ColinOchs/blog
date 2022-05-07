@@ -4,11 +4,11 @@
 {% block title %}Bye!{% endblock title %}
 
 {% block content %}
-
+<div class="container text-center">
 <h1>You are logged out.</h1>
-<p>come back soon y'all</p>
-<div class="main_image">
-    <img src='static/img/beverly.jpg' class="img-fluid"></div>
+<p>Y'all come back now, y'hear!</p>
+<div class="main_image">   <img style="height:350px;border:10px double darkgray;border-radius: 40%;" src="https://outsider.com/wp-content/uploads/2021/02/beverly-hillbillies-did-you-catch-this-character-making-sneak-appearance-in-closing-credits-585x390.jpg">  </div>
 
 <p>Click <a href="{% url 'home' %}">here</a> to go to home</p>
+</div>
 {% endblock content %}

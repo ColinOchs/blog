@@ -6,10 +6,10 @@
         margin: 20px;
         padding: 10px;
         border: solid 2px;
-        background: rgb(211, 211, 211, 0.5);
+        background: rgb(211, 211, 211, 0.9);
     "
     >
-    <h1 style="text-align: center; font-family:News gothic ;">{{ post.title }}</h1>
+    <h1 style="text-align: center; font-family:News gothic;color:black">{{ post.title }}</h1>
     <h5
         style="
         text-decoration: underline;
@@ -19,7 +19,7 @@
     >
         {{ post.author }}
     </h5>
-    <p style="margin: 10px; padding: 10px; font-size: 20px">{{ post.body }}</p>
+    <p style="margin: 10px; padding: 10px; font-size: 20px;color:black">{{ post.body }}</p>
     <h5 style="text-align: center; color: gray">{{ post.created_on }}</h5>
     {% if user.is_authenticated %}
     <p style="text-align: center">
