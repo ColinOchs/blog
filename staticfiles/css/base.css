@@ -19,7 +19,16 @@ body{
     background-color: rgba(244, 244, 244, 0.5);
     font-size: 20px;
     background-image: url(https://images.unsplash.com/photo-1483232539664-d89822fb5d3e?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&dl=yiqun-tang-3o7O_6fi7Qc-unsplash.jpg);
+
 }
 h1,h2,h3,h4,h5,p{
     color: antiquewhite;
+}
+footer{
+    position: absolute;
+    bottom: 0;
+} 
+.page-container {
+    position: relative;
+    min-height: 100vh;
 }
