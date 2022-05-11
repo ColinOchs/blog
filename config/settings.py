@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
 
+from email.policy import default
 from pathlib import Path
 from environs import Env
 
@@ -143,7 +144,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 LOGIN_REDIRECT_URL='home'
 #LOGOUT_REDIRECT_URL='login'
 
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend' % (env.str("EMAIL_BACKEND", default='smtp'))
+EMAIL_BACKEND = 'django.core.mail.backends.%s.EmailBackend' % (
+    env.str("EMAIL_BACKEND", default='smtp'))
 
 EMAIL_PORT=587
 EMAIL_USE_TLS=True
